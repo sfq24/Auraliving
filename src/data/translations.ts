@@ -203,7 +203,7 @@ export const translations = {
     },
     testimonial: {
       quote: '让妈妈搬到奥若养老是我们做过最正确的决定。这里的员工像对待家人一样照顾她，她比多年来任何时候都开心。家常菜和每日活动真正改变了她的生活。',
-      author: '陈女士',
+      author: '刘女士',
       role: '住户家属',
     },
     ourHomes: {
