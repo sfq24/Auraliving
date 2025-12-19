@@ -43,7 +43,7 @@ export const translations = {
         {
           name: 'Aura Living - Magnolia',
           address: 'Magnolia Neighborhood, Seattle',
-          features: ['High end neighborhood', 'Walking Distance to Park'],
+          features: ['High-end neighborhood', 'Walking Distance to Park'],
           image: '/images/magnolia_living_room.png',
         },
         {
