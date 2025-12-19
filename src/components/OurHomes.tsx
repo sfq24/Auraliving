@@ -39,7 +39,7 @@ export const OurHomes = () => {
             >
               <div className="relative h-56 overflow-hidden">
                 <img
-                  src={locationImages[location.image as keyof typeof locationImages]}
+                  src={location.image}  // 直接使用路径字符串
                   alt={location.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
