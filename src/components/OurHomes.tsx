@@ -4,9 +4,9 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
 const locationImages = {
-  'green-lake': 'https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=800',
-  'queen-anne': 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
-  'madison-park': 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800',
+  'Magnolia': 'images/magnolia_living_room.png',
+  'Kent': 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+  'Shoreline': 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800',
 };
 
 export const OurHomes = () => {
@@ -38,8 +38,13 @@ export const OurHomes = () => {
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
             >
               <div className="relative h-56 overflow-hidden">
-                <img
+                {/* <img
                   src={location.image}  // 直接使用路径字符串
+                  alt={location.name}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                /> */}
+                 <img
+                  src={locationImages[location.image as keyof typeof locationImages]}
                   alt={location.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
