@@ -18,13 +18,33 @@ export const Contact = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setSubmitted(true);
+  //   setTimeout(() => {
+  //     setSubmitted(false);
+  //     setFormData({ name: '', phone: '', email: '', interest: 'immediate', message: '' });
+  //   }, 3000);
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', phone: '', email: '', interest: 'immediate', message: '' });
-    }, 3000);
+    
+    try {
+      const response = await fetch("formhandler.auralivingcare.workers.dev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert("Thank you! Your message has been sent. We will contact you as soon as possible!");
+      } else {
+        alert("Oops! Something went wrong. Please call 2142054091");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
