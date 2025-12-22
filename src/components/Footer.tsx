@@ -73,13 +73,13 @@ export const Footer = () => {
             <h3 className="text-lg font-bold mb-4">{t.contactInfo}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <a href="tel:(206) 555-0123" className="hover:text-emerald-400 transition-colors">
-                  (206) 555-0123
+                <a href="tel:(214) 205-4091" className="hover:text-emerald-400 transition-colors">
+                  (214) 205-4091
                 </a>
               </li>
               <li>
-                <a href="mailto:info@auraliving.com" className="hover:text-emerald-400 transition-colors">
-                  info@auraliving.com
+                <a href="mailto:aura@auralivingcare.com" className="hover:text-emerald-400 transition-colors">
+                  aura@auralivingcare.com
                 </a>
               </li>
               <li>Seattle, WA</li>
