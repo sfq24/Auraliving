@@ -31,7 +31,7 @@ export const Contact = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("formhandler.auralivingcare.workers.dev", {
+      const response = await fetch("https://formhandler.auralivingcare.workers.dev", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
