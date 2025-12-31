@@ -5,8 +5,8 @@ import { translations } from '../data/translations';
 
 const locationImages = {
   'Magnolia': 'images/magnolia_living_room.png',
-  'Kent': 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
-  'Shoreline': 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800',
+  'Kent': 'images/Kent_Sunroom.png',
+  'Shoreline': 'images/Shoreline_exterior.png',
 };
 
 export const OurHomes = () => {
@@ -48,7 +48,7 @@ export const OurHomes = () => {
                   alt={location.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div> */}
               </div>
 
               <div className="p-6">
