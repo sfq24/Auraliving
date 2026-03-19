@@ -232,15 +232,15 @@ export const Shoreline = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               '/images/Shoreline_exterior.png',
-              '/images/Shoreline/Dining.png',
-              '/images/Shoreline/Bedroom 1.png',
-              '/images/Shoreline/Bedroom 2.png',
-              '/images/Shoreline/Bedroom 3.png',
-              '/images/Shoreline/Bathroom 2.png',
-              '/images/Shoreline/Bathroom 1.png',
-              '/images/Shoreline/External space.png',
-              '/images/Shoreline/Living Room 1.png',
-              '/images/Shoreline/Living Room 2.png',
+              '/images/Shoreline/Dining.jpeg',
+              '/images/Shoreline/Bedroom 1.jpeg',
+              '/images/Shoreline/Bedroom 2.jpeg',
+              '/images/Shoreline/Bedroom 3.jpeg',
+              '/images/Shoreline/Bathroom 2.jpeg',
+              '/images/Shoreline/Bathroom 1.jpeg',
+              '/images/Shoreline/External space.jpeg',
+              '/images/Shoreline/Living Room 1.jpeg',
+              '/images/Shoreline/Living Room 2.jpeg',
             ].map((image, index) => (
               <motion.div
                 key={index}
