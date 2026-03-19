@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Heart, UtensilsCrossed, Sparkles } from 'lucide-react';
+import { Heart, Home, UtensilsCrossed, Cpu, Sparkles, Award, Dog, Flower, Handshake } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
-const icons = [Heart, UtensilsCrossed, Sparkles];
+const icons = [Heart, Home, Award, Cpu, UtensilsCrossed, Sparkles, Dog, Flower, Handshake];
 
 export const ValueProposition = () => {
   const { language } = useLanguage();

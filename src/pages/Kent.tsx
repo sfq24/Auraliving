@@ -12,15 +12,15 @@ export const Kent = () => {
   return (
     <div className="pt-20">
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-blue-50 via-emerald-50 to-amber-50"
-          style={{
-            backgroundImage: 'url(/images/kent_hero.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundBlendMode: 'overlay',
-          }}
-        >
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-blue-50 via-emerald-50 to-amber-50"
+            style={{
+              backgroundImage: 'url(/images/Kent_Sunroom.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay',
+            }}
+          >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-emerald-900/60 to-blue-800/70"></div>
         </div>
 

@@ -12,15 +12,15 @@ export const Shoreline = () => {
   return (
     <div className="pt-20">
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50"
-          style={{
-            backgroundImage: 'url(/images/shoreline_hero.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundBlendMode: 'overlay',
-          }}
-        >
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50"
+            style={{
+              backgroundImage: 'url(/images/Shoreline_exterior.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundBlendMode: 'overlay',
+            }}
+          >
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/70 via-amber-900/60 to-blue-800/70"></div>
         </div>
 

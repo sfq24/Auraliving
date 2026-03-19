@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Music, Flower2, Palette, Cake, Calendar, Brain } from 'lucide-react';
+import { Music, Briefcase, Flower2, Dog, Palette, Cake, Calendar, Beef, Brain, Leaf, Coffee, Users, Sun } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
-const eventIcons = [Music, Flower2, Cake, Palette, Calendar, Brain];
+const eventIcons = [Music, Briefcase, Dog, Flower2, Calendar, Palette, Beef, Brain, Leaf, Cake, Coffee, Users, Sun];
 
 export const LifeAtAura = () => {
   const { language } = useLanguage();

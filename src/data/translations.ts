@@ -22,11 +22,15 @@ export const translations = {
           description: '24/7 skilled nursing care with personalized attention to each resident\'s unique needs',
         },
         {
-          title: 'Best services and training',
+          title: 'Luxury Home Enrionment',
+          description: 'Professional design, fully licensed and remodeled, clean and warm environment, well-maintained condition',
+        },
+        {
+          title: 'Best Services And Training',
           description: 'Best training and care service in the industry to give best care and love for residents',
         },
         {
-          title: 'Technology assited service',
+          title: 'Technology Assited Service',
           description: 'Use top-notch devices and systems to assist care. AI based management system to reach high accuracy and availability',
         },
         {
@@ -112,6 +116,11 @@ export const translations = {
           title: 'Memory Care Programs',
           description: 'Specialized activities for cognitive wellness',
           frequency: 'Daily',
+        },
+        {
+          title: 'Tea Therapy',
+          description: 'Traditional Chinese Kung-fu Tea to make resident calm and enjoy',
+          frequency: 'Weekly',
         },
       ],
       wellness: {
@@ -342,6 +351,7 @@ export const translations = {
       info: {
         phone: '(214) 205-4091',
         email: 'aura@auralivingcare.com',
+        hours: '周一至周日：上午9:00 - 下午6:00',
         address: '华盛顿州，西雅图',
       },
       callUs: '致电咨询',
