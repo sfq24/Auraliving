@@ -149,11 +149,13 @@ export const Magnolia = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               '/images/magnolia_living_room.png',
-              '/images/magnolia_bedroom.png',
-              '/images/magnolia_dining.png',
-              '/images/magnolia_garden.png',
-              '/images/magnolia_common_area.png',
-              '/images/magnolia_exterior.png',
+              '/images/Magnolia/Front Desk 2.png',
+              '/images/Magnolia/Kitchen.png',
+              '/images/Magnolia/Living Room.png',
+              '/images/Magnolia/Outside.png',
+              '/images/Magnolia/Restroom.png',
+              '/images/Magnolia/Bedroom.png',
+              '/images/Magnolia/Front Desk.png',
             ].map((image, index) => (
               <motion.div
                 key={index}

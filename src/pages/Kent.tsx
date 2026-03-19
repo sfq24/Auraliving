@@ -40,7 +40,7 @@ export const Kent = () => {
             <p className="text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed">
               {language === 'en'
                 ? 'Resort-style living with authentic Chinese cuisine and premium amenities'
-                : '度假式生活体验，正宗中餐服务和高端设施'}
+                : '中国生活体验，正宗中国管理员，中国环境，中餐服务和高端设施'}
             </p>
           </motion.div>
         </div>
@@ -122,7 +122,7 @@ export const Kent = () => {
               <p className="text-gray-700 leading-relaxed">
                 {language === 'en'
                   ? 'Daily home-cooked authentic Chinese meals prepared by experienced chefs'
-                  : '每日由经验丰富的厨师烹制正宗家常中餐'}
+                  : '由中国护工和管理员安排中餐服务，符合中国人的饮食习惯'}
               </p>
             </motion.div>
           </div>
@@ -231,12 +231,17 @@ export const Kent = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              '/images/kent_pool.png',
-              '/images/Kent_Sunroom.png',
-              '/images/kent_backyard.png',
-              '/images/kent_dining.png',
-              '/images/kent_bedroom.png',
-              '/images/kent_living.png',
+              '/images/Kent/Sunroom.png',
+              '/images/Kent/Living Room.png',
+              '/images/Kent/Kitchen.png',
+              '/images/Kent/Couple Bedroom.png',
+              '/images/Kent/Bedroom 1.png',
+              '/images/Kent/Bathroom 1.png',
+              '/images/Kent/Bathroom 2.png',
+              '/images/Kent/Backyard.png',
+              '/images/Kent/Bedroom 2.png',
+              '/images/Kent/Bedroom 3.png',
+              '/images/Kent/Sunroom & Yard.png',
             ].map((image, index) => (
               <motion.div
                 key={index}
