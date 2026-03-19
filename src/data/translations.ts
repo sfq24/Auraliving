@@ -22,6 +22,14 @@ export const translations = {
           description: '24/7 skilled nursing care with personalized attention to each resident\'s unique needs',
         },
         {
+          title: 'Best services and training',
+          description: 'Best training and care service in the industry to give best care and love for residents',
+        },
+        {
+          title: 'Technology assited service',
+          description: 'Use top-notch devices and systems to assist care. AI based management system to reach high accuracy and availability',
+        },
+        {
           title: 'Nutritious Home-Cooked Meals',
           description: 'Fresh, delicious meals prepared daily with dietary preferences and cultural cuisines in mind',
         },
@@ -43,13 +51,13 @@ export const translations = {
         {
           name: 'Aura Living - Magnolia',
           address: 'Magnolia Neighborhood, Seattle',
-          features: ['High-end neighborhood', 'Walking Distance to Park'],
+          features: ['Premium service', 'High-end neighborhood', 'Walking Distance to Park'],
           image: 'Magnolia',
         },
         {
           name: 'Aura Living - Kent',
           address: 'Kent, Washington',
-          features: ['Huge backyard', 'Chineses food and service', 'Swimming poll and Hottub'],
+          features: ['Chineses friendly Home', 'Chineses food and service', 'Huge backyard', 'Swimming pool and Hottub'],
           image: 'Kent',
         },
         {
@@ -69,6 +77,16 @@ export const translations = {
           title: 'Music Therapy Sessions',
           description: 'Weekly sessions with professional music therapists',
           frequency: 'Every Tuesday',
+        },
+        {
+          title: 'In-house Doctor and Nurse Visit',
+          description: 'Doctors, psychiatrist and register nurse regular visit and on-call',
+          frequency: 'Monthly',
+        },
+        {
+          title: 'Dog Therapy',
+          description: 'Service dog therapy to boost residents energy',
+          frequency: 'Seasonal',
         },
         {
           title: 'Garden & Nature Time',
