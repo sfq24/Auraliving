@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { MapPin, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
@@ -7,6 +8,15 @@ const locationImages = {
   'Magnolia': 'images/magnolia_living_room.png',
   'Kent': 'images/Kent_Sunroom.png',
   'Shoreline': 'images/Shoreline_exterior.png',
+};
+
+const locationRoutes: Record<string, string> = {
+  'Aura Living - Magnolia': '/homes/magnolia',
+  'Aura Living - Kent': '/homes/kent',
+  'Aura Living - Shoreline': '/homes/shoreline',
+  '奥若养老 - 马格诺利亚': '/homes/magnolia',
+  '奥若养老 - 肯特': '/homes/kent',
+  '奥若养老 - 岸线': '/homes/shoreline',
 };
 
 export const OurHomes = () => {
@@ -38,17 +48,11 @@ export const OurHomes = () => {
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
             >
               <div className="relative h-56 overflow-hidden">
-                {/* <img
-                  src={location.image}  // 直接使用路径字符串
-                  alt={location.name}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                /> */}
                  <img
                   src={locationImages[location.image as keyof typeof locationImages]}
                   alt={location.name}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div> */}
               </div>
 
               <div className="p-6">
@@ -67,9 +71,12 @@ export const OurHomes = () => {
                   ))}
                 </div>
 
-                <button className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
+                <Link
+                  to={locationRoutes[location.name] || '/'}
+                  className="block w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-center"
+                >
                   {t.learnMore}
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
