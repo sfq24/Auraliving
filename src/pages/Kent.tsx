@@ -1,16 +1,35 @@
 import { motion } from 'framer-motion';
-import { MapPin, Waves, Droplets, UtensilsCrossed, Heart, Phone, Mail, Home } from 'lucide-react';
+import { MapPin, Waves, Droplets, UtensilsCrossed, Phone, Mail, Home, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { SEOHead } from '../components/SEOHead';
+import { SchemaOrg } from '../components/SchemaOrg';
 
 export const Kent = () => {
   const { language } = useLanguage();
 
-  const scrollToContact = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
-
   return (
     <div className="pt-20">
+      <SEOHead
+        title="Kent Adult Family Home | Chinese Senior Care Seattle | Aura Living"
+        description="Aura Living Kent is a Chinese-friendly adult family home in Kent, WA. Mandarin & Cantonese staff, authentic Chinese cuisine, swimming pool, hot tub, and huge backyard."
+        path="/homes/kent"
+      />
+      <SchemaOrg type="kent" />
+
+      {/* Breadcrumb */}
+      <nav aria-label="breadcrumb" className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><Link to="/" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Home' : '首页'}</Link></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li><a href="/#our-homes" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Our Homes' : '我们的家园'}</a></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li className="text-gray-900 font-medium">Kent</li>
+          </ol>
+        </div>
+      </nav>
+
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           <div
             className="absolute inset-0 bg-gradient-to-br from-blue-50 via-emerald-50 to-amber-50"
@@ -231,18 +250,18 @@ export const Kent = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              '/images/Kent/Sunroom.png',
-              '/images/Kent/Living Room.png',
-              '/images/Kent/Kitchen.png',
-              '/images/Kent/Couple Bedroom.png',
-              '/images/Kent/Bedroom 1.png',
-              '/images/Kent/Bathroom 1.png',
-              '/images/Kent/Bathroom 2.png',
-              '/images/Kent/Backyard.png',
-              '/images/Kent/Bedroom 2.png',
-              '/images/Kent/Bedroom 3.png',
-              '/images/Kent/Sunroom & Yard.png',
-            ].map((image, index) => (
+              { src: '/images/Kent/Sunroom.png', alt: 'Aura Living Kent sunroom - bright senior living space in Kent WA' },
+              { src: '/images/Kent/Living Room.png', alt: 'Kent adult family home living room - Chinese-friendly senior care' },
+              { src: '/images/Kent/Kitchen.png', alt: 'Kent senior care home kitchen - authentic Chinese cuisine prepared daily' },
+              { src: '/images/Kent/Couple Bedroom.png', alt: 'Couples bedroom at Kent adult family home - Aura Living Washington' },
+              { src: '/images/Kent/Bedroom 1.png', alt: 'Private bedroom at Aura Living Kent adult family home' },
+              { src: '/images/Kent/Bathroom 1.png', alt: 'Accessible bathroom at Kent adult family home - Aura Living' },
+              { src: '/images/Kent/Bathroom 2.png', alt: 'Senior-accessible bathroom at Aura Living Kent WA' },
+              { src: '/images/Kent/Backyard.png', alt: 'Huge backyard at Kent adult family home - outdoor space for seniors' },
+              { src: '/images/Kent/Bedroom 2.png', alt: 'Comfortable bedroom at Aura Living Kent senior care home' },
+              { src: '/images/Kent/Bedroom 3.png', alt: 'Spacious bedroom at Kent Chinese adult family home - Aura Living' },
+              { src: '/images/Kent/Sunroom & Yard.png', alt: 'Sunroom and backyard at Aura Living Kent - resort-style senior living' },
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -252,8 +271,9 @@ export const Kent = () => {
                 className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
               >
                 <img
-                  src={image}
-                  alt={`Kent Home ${index + 1}`}
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -282,11 +302,11 @@ export const Kent = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:(214) 205-4091"
+                href="tel:(800) 490-1990"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
-                <span>(214) 205-4091</span>
+                <span>(800) 490-1990</span>
               </a>
               <a
                 href="mailto:aura@auralivingcare.com"

@@ -2,13 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Living - Premium Senior Care in Seattle</title>
-    <meta property="og:image" content="/images/default_card_image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="/images/default_card_image.png">
-</head>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/Aura Living Logo.png" />
+    <link rel="apple-touch-icon" href="/images/Aura Living Logo.png" />
+
+    <!-- Default title and description (overridden per-page by react-helmet-async) -->
+    <title>Aura Living | Seattle Adult Family Home | Chinese-Friendly Senior Care</title>
+    <meta name="description" content="Aura Living provides premium adult family home care in Seattle, WA. Chinese-friendly staff, 24/7 nursing, home-cooked meals. Locations in Magnolia, Kent, and Shoreline." />
+
+    <!-- Default Open Graph (overridden per-page) -->
+    <meta property="og:site_name" content="Aura Living" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.auralivingcare.com/images/default_card_image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.auralivingcare.com/images/default_card_image.png" />
+
+    <!-- hreflang (same URL serves both languages via JS) -->
+    <link rel="alternate" hrefLang="en" href="https://www.auralivingcare.com/" />
+    <link rel="alternate" hrefLang="zh-Hans" href="https://www.auralivingcare.com/" />
+    <link rel="alternate" hrefLang="x-default" href="https://www.auralivingcare.com/" />
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

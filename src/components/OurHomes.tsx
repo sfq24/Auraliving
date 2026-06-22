@@ -50,7 +50,8 @@ export const OurHomes = () => {
               <div className="relative h-56 overflow-hidden">
                  <img
                   src={locationImages[location.image as keyof typeof locationImages]}
-                  alt={location.name}
+                  alt={`${location.name} - adult family home in ${location.address}`}
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>

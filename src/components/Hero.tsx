@@ -8,25 +8,18 @@ export const Hero = () => {
   const t = translations[language].hero;
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50"
-        style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 via-emerald-800/50 to-blue-900/60"></div>
-      </div>
+      {/* Local hero image with SEO-friendly alt text */}
+      <img
+        src="/images/magnolia_living_room.png"
+        alt="Aura Living senior care home living room - adult family home in Seattle WA"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/70 via-emerald-800/60 to-blue-900/70"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <motion.div

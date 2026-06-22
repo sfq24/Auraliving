@@ -1,16 +1,35 @@
 import { motion } from 'framer-motion';
-import { MapPin, Flower2, School, Heart, Phone, Mail, Trees } from 'lucide-react';
+import { MapPin, Flower2, School, Heart, Phone, Mail, Trees, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { SEOHead } from '../components/SEOHead';
+import { SchemaOrg } from '../components/SchemaOrg';
 
 export const Shoreline = () => {
   const { language } = useLanguage();
 
-  const scrollToContact = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
-
   return (
     <div className="pt-20">
+      <SEOHead
+        title="Shoreline Adult Family Home Seattle WA | Aura Living"
+        description="Aura Living Shoreline is a serene adult family home in Shoreline, WA. Private garden, memory care programs, 24/7 professional nursing, tranquil neighborhood setting."
+        path="/homes/shoreline"
+      />
+      <SchemaOrg type="shoreline" />
+
+      {/* Breadcrumb */}
+      <nav aria-label="breadcrumb" className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><Link to="/" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Home' : '首页'}</Link></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li><a href="/#our-homes" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Our Homes' : '我们的家园'}</a></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li className="text-gray-900 font-medium">Shoreline</li>
+          </ol>
+        </div>
+      </nav>
+
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           <div
             className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50"
@@ -231,17 +250,17 @@ export const Shoreline = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              '/images/Shoreline_exterior.png',
-              '/images/Shoreline/Dining.jpeg',
-              '/images/Shoreline/Bedroom 1.jpeg',
-              '/images/Shoreline/Bedroom 2.jpeg',
-              '/images/Shoreline/Bedroom 3.jpeg',
-              '/images/Shoreline/Bathroom 2.jpeg',
-              '/images/Shoreline/Bathroom 1.jpeg',
-              '/images/Shoreline/External space.jpeg',
-              '/images/Shoreline/Living Room 1.jpeg',
-              '/images/Shoreline/Living Room 2.jpeg',
-            ].map((image, index) => (
+              { src: '/images/Shoreline_exterior.png', alt: 'Aura Living Shoreline exterior - adult family home in Shoreline WA' },
+              { src: '/images/Shoreline/Dining.jpeg', alt: 'Shoreline senior care home dining room - home-cooked meals Aura Living' },
+              { src: '/images/Shoreline/Bedroom 1.jpeg', alt: 'Private bedroom at Shoreline adult family home - Aura Living WA' },
+              { src: '/images/Shoreline/Bedroom 2.jpeg', alt: 'Comfortable senior bedroom at Aura Living Shoreline' },
+              { src: '/images/Shoreline/Bedroom 3.jpeg', alt: 'Serene bedroom at Shoreline adult family home Seattle area' },
+              { src: '/images/Shoreline/Bathroom 2.jpeg', alt: 'Accessible bathroom at Aura Living Shoreline senior care' },
+              { src: '/images/Shoreline/Bathroom 1.jpeg', alt: 'Senior-accessible bathroom at Shoreline adult family home' },
+              { src: '/images/Shoreline/External space.jpeg', alt: 'Private garden and outdoor space at Aura Living Shoreline' },
+              { src: '/images/Shoreline/Living Room 1.jpeg', alt: 'Tranquil living room at Shoreline adult family home - Aura Living' },
+              { src: '/images/Shoreline/Living Room 2.jpeg', alt: 'Cozy common area at Aura Living Shoreline senior care home' },
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -251,8 +270,9 @@ export const Shoreline = () => {
                 className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
               >
                 <img
-                  src={image}
-                  alt={`Shoreline Home ${index + 1}`}
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -281,11 +301,11 @@ export const Shoreline = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:(214) 205-4091"
+                href="tel:(800) 490-1990"
                 className="bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
-                <span>(214) 205-4091</span>
+                <span>(800) 490-1990</span>
               </a>
               <a
                 href="mailto:aura@auralivingcare.com"

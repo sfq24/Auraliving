@@ -1,16 +1,35 @@
 import { motion } from 'framer-motion';
-import { MapPin, Star, Trees, Heart, Phone, Mail } from 'lucide-react';
+import { MapPin, Star, Trees, Heart, Phone, Mail, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { SEOHead } from '../components/SEOHead';
+import { SchemaOrg } from '../components/SchemaOrg';
 
 export const Magnolia = () => {
   const { language } = useLanguage();
 
-  const scrollToContact = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  };
-
   return (
     <div className="pt-20">
+      <SEOHead
+        title="Magnolia Adult Family Home Seattle | Aura Living"
+        description="Aura Living Magnolia is a premium adult family home in Seattle's prestigious Magnolia neighborhood. 24/7 nursing care, luxury environment, walking distance to parks."
+        path="/homes/magnolia"
+      />
+      <SchemaOrg type="magnolia" />
+
+      {/* Breadcrumb */}
+      <nav aria-label="breadcrumb" className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><Link to="/" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Home' : '首页'}</Link></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li><a href="/#our-homes" className="hover:text-emerald-700 transition-colors">{language === 'en' ? 'Our Homes' : '我们的家园'}</a></li>
+            <li><ChevronRight className="w-4 h-4" /></li>
+            <li className="text-gray-900 font-medium">Magnolia</li>
+          </ol>
+        </div>
+      </nav>
+
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
           <div
             className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-blue-50 to-amber-50"
@@ -148,15 +167,14 @@ export const Magnolia = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              '/images/magnolia_living_room.png',
-              '/images/Magnolia/Front Desk 2.png',
-              '/images/Magnolia/Kitchen.png',
-              '/images/Magnolia/Living Room.png',
-              '/images/Magnolia/Outside.png',
-              '/images/Magnolia/Restroom.png',
-              '/images/Magnolia/Bedroom.png',
-              '/images/Magnolia/Front Desk.png',
-            ].map((image, index) => (
+              { src: '/images/magnolia_living_room.png', alt: 'Aura Living Magnolia living room - Seattle adult family home' },
+              { src: '/images/Magnolia/Front Desk 2.png', alt: 'Aura Living Magnolia reception area - professional senior care Seattle' },
+              { src: '/images/Magnolia/Kitchen.png', alt: 'Magnolia adult family home kitchen - home-cooked meals for seniors' },
+              { src: '/images/Magnolia/Living Room.png', alt: 'Magnolia senior care home common living room - Aura Living Seattle' },
+              { src: '/images/Magnolia/Restroom.png', alt: 'Magnolia adult family home accessible bathroom - Aura Living' },
+              { src: '/images/Magnolia/Bedroom.jpg', alt: 'Private bedroom at Magnolia adult family home Seattle - Aura Living' },
+              { src: '/images/Magnolia/Front Desk.png', alt: 'Aura Living Magnolia front desk - 24/7 senior care staff Seattle' },
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -166,8 +184,9 @@ export const Magnolia = () => {
                 className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
               >
                 <img
-                  src={image}
-                  alt={`Magnolia Home ${index + 1}`}
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -196,11 +215,11 @@ export const Magnolia = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:(214) 205-4091"
+                href="tel:(800) 490-1990"
                 className="bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
-                <span>(214) 205-4091</span>
+                <span>(800) 490-1990</span>
               </a>
               <a
                 href="mailto:aura@auralivingcare.com"

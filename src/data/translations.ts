@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       headline: 'Professional Care, Warmth of Home',
-      subheadline: 'Experience loving, healthy, and happy senior living in the heart of Seattle',
+      subheadline: 'Premier adult family home care in Seattle — loving, professional, and always feeling like home',
       primaryCta: 'Schedule a Tour',
       secondaryCta: 'Learn More',
     },
@@ -22,7 +22,7 @@ export const translations = {
           description: '24/7 skilled nursing care with personalized attention to each resident\'s unique needs',
         },
         {
-          title: 'Luxury Home Enrionment',
+          title: 'Luxury Home Environment',
           description: 'Professional design, fully licensed and remodeled, clean and warm environment, well-maintained condition',
         },
         {
@@ -30,7 +30,7 @@ export const translations = {
           description: 'Best training and care service in the industry to give best care and love for residents',
         },
         {
-          title: 'Technology Assited Service',
+          title: 'Technology Assisted Service',
           description: 'Use top-notch devices and systems to assist care. AI based management system to reach high accuracy and availability',
         },
         {
@@ -61,7 +61,7 @@ export const translations = {
         {
           name: 'Aura Living - Kent',
           address: 'Kent, Washington',
-          features: ['Chineses friendly Home', 'Chineses food and service', 'Huge backyard', 'Swimming pool and Hottub'],
+          features: ['Chinese-Friendly Home', 'Chinese Food & Service', 'Huge backyard', 'Swimming pool and Hot Tub'],
           image: 'Kent',
         },
         {
@@ -84,12 +84,12 @@ export const translations = {
         },
         {
           title: 'In-house Doctor and Nurse Visit',
-          description: 'Doctors, psychiatrist and register nurse regular visit and on-call',
+          description: 'Doctors, psychiatrist and registered nurse regular visits and on-call',
           frequency: 'Monthly',
         },
         {
           title: 'Dog Therapy',
-          description: 'Service dog therapy to boost residents energy',
+          description: 'Service dog therapy to boost residents\' mood and energy',
           frequency: 'Seasonal',
         },
         {
@@ -119,7 +119,7 @@ export const translations = {
         },
         {
           title: 'Tea Therapy',
-          description: 'Traditional Chinese Kung-fu Tea to make resident calm and enjoy',
+          description: 'Traditional Chinese Kung-fu tea ceremony to help residents relax and enjoy',
           frequency: 'Weekly',
         },
       ],
@@ -165,26 +165,50 @@ export const translations = {
         name: 'Full Name',
         namePlaceholder: 'Your name',
         phone: 'Phone Number',
-        phonePlaceholder: '(214) 205-4091',
+        phonePlaceholder: '(800) 490-1990',
         email: 'Email Address',
         emailPlaceholder: 'aura@auralivingcare.com',
-        interest: 'Interest Level',
-        interestOptions: {
-          immediate: 'Immediate Need',
-          planning: 'Planning Ahead (3-6 months)',
-          exploring: 'Just Exploring',
-        },
         message: 'Message',
         messagePlaceholder: 'Tell us about your needs and any questions you have...',
         submit: 'Send Inquiry',
       },
       info: {
-        phone: '(214) 205-4091',
+        phone: '(800) 490-1990',
         email: 'aura@auralivingcare.com',
         hours: 'Mon-Sun: 9:00 AM - 6:00 PM',
         address: 'Seattle, WA',
       },
       callUs: 'Call Us',
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Everything you need to know about adult family home care in Seattle',
+      items: [
+        {
+          question: 'What is an adult family home (AFH) in Washington State?',
+          answer: 'An adult family home is a licensed residential care setting in Washington State where up to six adults receive personal care, nursing support, and other services in a home-like environment. Unlike large nursing facilities, AFHs offer a smaller, more personal setting where residents receive individualized attention.',
+        },
+        {
+          question: 'How is an adult family home different from a nursing home or assisted living?',
+          answer: 'Adult family homes typically house 6 or fewer residents, providing a much more intimate and home-like experience than large assisted living facilities or nursing homes. Residents receive personalized 1-on-1 care, home-cooked meals, and a family atmosphere. Staffing ratios are significantly better, meaning more direct attention per resident.',
+        },
+        {
+          question: 'What services does Aura Living provide?',
+          answer: 'Aura Living provides 24/7 professional nursing care, medication management, personal care assistance (bathing, dressing, grooming), memory care and dementia support, home-cooked meals, transportation to medical appointments, and a full calendar of social and therapeutic activities.',
+        },
+        {
+          question: 'Do you offer Chinese-language care services?',
+          answer: 'Yes. Our Kent location specializes in Chinese-friendly care with Mandarin and Cantonese-speaking staff, authentic Chinese home-cooked meals, and celebrations of Chinese cultural holidays including Spring Festival and Mid-Autumn Festival. All our locations welcome Chinese-speaking families.',
+        },
+        {
+          question: 'How do I know if an adult family home is the right choice for my loved one?',
+          answer: 'An adult family home is often ideal for seniors who need consistent personal care but prefer a warm, home-like environment over a large institution. We recommend scheduling a free tour so you can meet our caregivers, see the home, and ask questions. There is no obligation.',
+        },
+        {
+          question: 'How do I schedule a tour of an Aura Living home?',
+          answer: 'You can schedule a tour by calling us directly, sending an email, or filling out the contact form on this page. We offer flexible tour times 7 days a week from 9 AM to 6 PM. Tours are free and there is no commitment required.',
+        },
+      ],
     },
     footer: {
       tagline: 'Professional Care, Warmth of Home',
@@ -192,7 +216,7 @@ export const translations = {
       aboutText: 'Aura Living provides premium adult family home care in Seattle, combining professional medical support with the comfort and warmth of home.',
       quickLinks: 'Quick Links',
       contactInfo: 'Contact',
-      rights: '© 2024 Aura Living. All rights reserved.',
+      rights: '© 2026 Aura Living. All rights reserved.',
       licensed: 'Licensed Adult Family Home Provider in Washington State',
     },
   },
@@ -246,7 +270,7 @@ export const translations = {
         {
           name: '奥若养老 - 肯特',
           address: '肯特，西雅图',
-          features: ['壮观园景', , '中文护工', '中餐', '游泳池', '温泉'],
+          features: ['壮观园景', '中文护工', '中餐', '游泳池', '温泉'],
           image: 'Kent',
         },
         {
@@ -335,26 +359,50 @@ export const translations = {
         name: '姓名',
         namePlaceholder: '请输入您的姓名',
         phone: '电话',
-        phonePlaceholder: '(214) 205-4091',
+        phonePlaceholder: '(800) 490-1990',
         email: '邮箱',
         emailPlaceholder: 'aura@auralivingcare.com',
-        interest: '需求紧迫程度',
-        interestOptions: {
-          immediate: '急需入住',
-          planning: '计划中（3-6个月内）',
-          exploring: '初步了解',
-        },
         message: '留言',
         messagePlaceholder: '请告诉我们您的需求和任何问题...',
         submit: '提交咨询',
       },
       info: {
-        phone: '(214) 205-4091',
+        phone: '(800) 490-1990',
         email: 'aura@auralivingcare.com',
         hours: '周一至周日：上午9:00 - 下午6:00',
         address: '华盛顿州，西雅图',
       },
       callUs: '致电咨询',
+    },
+    faq: {
+      title: '常见问题解答',
+      subtitle: '关于西雅图成人家庭式养老的一切您需要了解的内容',
+      items: [
+        {
+          question: '什么是华盛顿州的成人家庭照护（AFH）？',
+          answer: '成人家庭照护是华盛顿州的一种持证住宅式照护形式，最多为六位成人在家庭式环境中提供个人护理、护士支持及其他服务。与大型养老机构不同，成人家庭照护规模更小、更温馨，长者可获得个性化的专属关怀。',
+        },
+        {
+          question: '成人家庭照护与养老院、辅助生活社区有什么区别？',
+          answer: '成人家庭照护通常只住6位或更少的长者，提供比大型辅助生活设施或养老院更亲密的家庭式体验。长者获得1对1的个性化照护、家常菜和家庭氛围。护理人员与长者的比例显著更高，意味着每位长者获得更多直接关注。',
+        },
+        {
+          question: '奥若养老提供哪些服务？',
+          answer: '奥若养老提供24小时专业护理、药物管理、个人生活照料（洗澡、穿衣、仪容），记忆护理和失智症支持，家常餐饮，医疗预约交通接送，以及丰富的社交和康复活动日程。',
+        },
+        {
+          question: '你们提供中文服务吗？',
+          answer: '是的。我们的肯特家园专注于华人友好服务，配有普通话和粤语护工，提供正宗中餐，庆祝春节、中秋节等中国传统节日。我们所有家园都欢迎讲中文的家庭。',
+        },
+        {
+          question: '我如何知道成人家庭照护是否适合我的家人？',
+          answer: '成人家庭照护通常非常适合需要持续个人护理、但希望在温馨家庭环境而非大型机构中生活的长者。我们建议您预约免费参观，亲自见见我们的护理人员、参观家园并提问，无任何义务。',
+        },
+        {
+          question: '如何预约参观奥若养老？',
+          answer: '您可以直接致电、发送电子邮件，或填写本页面的联系表单来预约参观。我们每周7天、上午9点至下午6点提供灵活的参观时间，参观完全免费，无需任何承诺。',
+        },
+      ],
     },
     footer: {
       tagline: '专业护理，家的温暖',

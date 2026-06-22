@@ -12,20 +12,10 @@ export const Contact = () => {
     name: '',
     phone: '',
     email: '',
-    interest: 'immediate',
     message: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setSubmitted(true);
-  //   setTimeout(() => {
-  //     setSubmitted(false);
-  //     setFormData({ name: '', phone: '', email: '', interest: 'immediate', message: '' });
-  //   }, 3000);
-  // };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,9 +28,10 @@ export const Contact = () => {
       });
   
       if (response.ok) {
+        setSubmitted(true);
         alert("Thank you! Your message has been sent. We will contact you as soon as possible!");
       } else {
-        alert("Oops! Something went wrong. Please call 2142054091");
+        alert("Oops! Something went wrong. Please call (800) 490-1990");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -126,23 +117,6 @@ export const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="interest" className="block text-sm font-semibold text-gray-700 mb-2">
-                    {t.form.interest}
-                  </label>
-                  <select
-                    id="interest"
-                    name="interest"
-                    value={formData.interest}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-lg"
-                  >
-                    <option value="immediate">{t.form.interestOptions.immediate}</option>
-                    <option value="planning">{t.form.interestOptions.planning}</option>
-                    <option value="exploring">{t.form.interestOptions.exploring}</option>
-                  </select>
-                </div>
-
-                <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                     {t.form.message}
                   </label>
@@ -183,7 +157,7 @@ export const Contact = () => {
             className="space-y-8"
           >
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.info.address}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Contact Information' : '联系方式'}</h3>
 
               <div className="space-y-6">
                 <a
